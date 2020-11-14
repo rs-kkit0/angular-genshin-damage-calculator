@@ -1,0 +1,37 @@
+<mat-form-field>
+    <mat-label>攻撃力</mat-label>
+    <input matInput [(ngModel)]="atk">
+</mat-form-field>
+
+<mat-form-field>
+    <mat-label>会心率</mat-label>
+    <input matInput [(ngModel)]="critRate">
+</mat-form-field>
+
+<mat-form-field>
+    <mat-label>会心ダメージ(%)</mat-label>
+    <input matInput [(ngModel)]="critDmg">
+</mat-form-field>
+
+<mat-form-field>
+    <mat-label>物理ダメージ(%)</mat-label>
+    <input matInput [(ngModel)]="physicalDmgBonus">
+</mat-form-field>
+
+<mat-form-field>
+    <mat-label>元素ダメージ(%)</mat-label>
+    <input matInput [(ngModel)]="elementalDmgBonus">
+</mat-form-field>
+
+<mat-form-field>
+    <mat-label>元素スキル倍率(%)</mat-label>
+    <input matInput [(ngModel)]="elementalSkillDmg">
+</mat-form-field>
+
+<button mat-raised-button color="primary" (click)="calc()">計算</button>
+
+<div>
+    <h2>スキルダメージは: {{ calcDmg }}</h2>
+    <h2>会心時のダメージは: {{ calcCritDmg }}</h2>
+    <h2>ダメージ期待値は: {{ calcAvgDmg }}</h2>
+</div>
